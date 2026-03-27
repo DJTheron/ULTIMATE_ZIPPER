@@ -11,13 +11,12 @@ foldername = filename.split(".")[0]
 
 current_file = filename
 
-for i in range(3):
+for i in range(timestozip):
     os.mkdir(foldername)
     move(current_file, foldername)
     make_archive(foldername, 'zip', '.', foldername) 
     rmtree(foldername)
     current_file = zipname
-
 
 # make the dir
 # move the file in the dir
